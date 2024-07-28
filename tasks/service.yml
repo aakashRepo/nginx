@@ -1,0 +1,6 @@
+---
+   - name: start {{package}}
+     ansible.builtin.service:
+       name={{package}}
+       state=started
+

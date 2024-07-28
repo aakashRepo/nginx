@@ -1,0 +1,8 @@
+---
+    - name: Copy data files into nginx
+      template:
+          src: templates/index.html.j2
+          dest: /var/www/html/index.html
+      register: copy_status
+      notify: restart nginx
+
